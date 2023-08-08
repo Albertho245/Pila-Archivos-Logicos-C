@@ -1,0 +1,82 @@
+#include "Pila."
+#include <string>
+#include <string.h>
+#define MAX 10
+
+using std::string;
+
+#include "Pila.h"
+
+/* Declaración del método constructor. Inicializa el Tope en -1,
+indicando pila vacía. */
+template <class T>
+Pila<T>::Pila()
+{
+    Tope= -1;
+}
+
+/* Método que introduce un dato en la pilam atualizando el tope de la
+misma. El uso de este método presupone que antes de invocarlo se debe
+verificar que haya espacio disponible en la pila. */
+template <class T>
+void Pila<T>::Push(T Dato)
+{
+    EspacioPila[++Tope]= Dato;
+}
+
+/* Método que quita el elemento que está en el tope de la pila y lo
+asigna a un parámetro por referencia. El uso de este método presupone
+que antes de invocarlo se debe verificar que la pila no esté vacía. */
+template <class T>
+void Pila<T>::Pop(T *Dato)
+{
+    *Dato=EspacioPila[Tope--];
+}
+
+/* Método auxiliar que verifica si la pila está llena. Regresa 1 si
+todos los espacios están ocupados y 0 en caso contrario. */
+template <class T>
+int Pila<T>::PilaLlena()
+{
+     if(Tope==MAX-1)
+      return 1;
+     else
+      return 0;
+}
+
+/* Método auxiliar que verifica si la pila está vacía, regresando 1 si
+lo está y 0 en caso contrario. */
+template <class T>
+int Pila<T>::PilaVacia()
+{
+     if(Tope==-1)
+      return 1;
+     else
+      return 0;
+}
+
+/* Función que usa la plantilla de la clase Pila. Se almacenan algunos
+números enteros en un objeto tipo Pila y posteriormente se quita el
+ultimo guardado y lo imprime */
+void FuncionUsaPila()
+{
+    /* Declaración de un objeto tipo Pila, usando el tipo int para
+    instanciar la T. */
+
+    Pila<int> ObjPila;
+    int Valor=0;
+
+    /* Mientras la pila no se llena inserta números en la misma. En este
+    ejemplo, es en la aplicación donde se evalúa que haya espacio disponible
+    antes de llamar al método que inserta un valor en la pila. */
+    while(ObjPila.PilaLlena()!=1)
+        ObjPila.Push(Valor++);
+
+    /* Verifica si la pila no esta vacía. Si es así, quita el elemento
+    almacenado en el Tope (el último insertado) y lo imprime. */
+    if(ObjPila.PilaVacia()!=1)
+    {
+        ObjPila.Pop(&Valor);
+        cout <<Valor<<"\n";
+    }
+}

@@ -1,0 +1,25 @@
+#ifndef PILA_H
+#define PILA_H
+
+#include<string>
+using std::string;
+#define MAX 10
+
+/* Se define la plantilla de la clase Pila con todos sus atributos y métodos.
+Ademas se incluye una pequeña aplicación de la misma. */
+template<class T>
+class Pila
+{
+    private:
+        T EspacioPila[MAX];
+        int Tope;
+    public:
+        Pila();
+        void Push(T Dato);
+        void Pop(T *Dato);
+        int PilaLlena();
+        int PilaVacia();
+};
+
+
+#endif // PILA_

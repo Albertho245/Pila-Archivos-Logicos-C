@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1677653005 source:c:\users\savic\onedrive\escritorio\codigos\pila\main.cpp
+	<iostream>
+	"Pila.h"
+
+1677635026 c:\users\savic\onedrive\escritorio\codigos\pila\pila.h
+	<string>
+	<string.h>
+
+1677890649 source:c:\users\savic\onedrive\escritorio\pila\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	"Cheques.h"
+
+1677889384 c:\users\savic\onedrive\escritorio\pila\cheques.h
+	"Pila.h"
+
+1677809805 c:\users\savic\onedrive\escritorio\pila\pila.h
+	<string>
+	<string.h>
+
+1677913897 source:c:\users\savic\onedrive\escritorio\pila (el bueno)\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<string>
+	"Cheques.h"
+
+1677914227 c:\users\savic\onedrive\escritorio\pila (el bueno)\cheques.h
+	"Pila.h"
+
+1677809805 c:\users\savic\onedrive\escritorio\pila (el bueno)\pila.h
+	<string>
+	<string.h>
+
+1678071595 source:c:\users\savic\onedrive\escritorio\pila con archivos logicos\main.cpp
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<string>
+	<string.h>
+	<iostream>
+
+1678068991 c:\users\savic\onedrive\escritorio\pila con archivos logicos\cheques.h
+	"Pila.h"
+
+1677809805 c:\users\savic\onedrive\escritorio\pila con archivos logicos\pila.h
+	<string>
+	<string.h>
+
